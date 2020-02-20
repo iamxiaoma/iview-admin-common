@@ -58,4 +58,10 @@ router.afterEach(to => {
   window.scrollTo(0, 0)
 })
 
+// 解决路由导航 NavigationDuplicated 的问题
+const originalPush = Router.prototype.push
+Router.prototype.push = function push (location) {
+  return originalPush.call(this, location).catch(err => err)
+}
+
 export default router
