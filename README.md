@@ -5,8 +5,8 @@
 </p>
 
 <h1>
-iView Admin
-    <h3>Vue.js 2.0 admin management system template based on iView.</h3>
+iView Admin Common
+    <h3>基于 iView Admin 的模块化业务组件通用模板（适用于各种类型的电商系统）</h3>
 </h1>
 
 [![](https://img.shields.io/github/release/iview/iview-admin.svg)](https://github.com/iview/iview-admin/releases)
@@ -14,6 +14,31 @@ iView Admin
 [![vue](https://img.shields.io/badge/vue-2.5.17-brightgreen.svg?style=flat-square)](https://github.com/vuejs/vue)
 [![iview ui](https://img.shields.io/badge/iview-3.2.2-brightgreen.svg?style=flat-square)](https://github.com/iview/iview)
 [![npm](https://img.shields.io/npm/l/express.svg)]()
+
+## 业务组件
+
+<ul>
+  <li>角色管理</li>
+  <li>管理员模块</li>
+  <li>部门管理</li>
+  <li>权限设置</li>
+  <li>站点设置</li>
+  <li>导航管理</li>
+  <li>轮播图管理</li>
+  <li>楼层管理</li>
+  <li>商户管理</li>
+  <li>品牌管理</li>
+  <li>商品分类</li>
+  <li>商品管理</li>
+  <li>活动管理</li>
+  <li>会员管理</li>
+  <li>订单管理</li>
+  <li>发票管理</li>
+  <li>售后管理</li>
+  <li>财务管理</li>
+  <li>统计模块</li>
+</ul>
+
 
 ## Introduction
 
@@ -70,7 +95,7 @@ iView Admin is a front-end management background integration solution. It based 
 ## Getting started
 ```bush
 # clone the project
-git clone https://github.com/iview/iview-admin.git
+git clone https://github.com/iamxiaoma/iview-admin-common.git
 
 // install dependencies
 npm install

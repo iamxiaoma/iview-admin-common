@@ -9,6 +9,7 @@ import ViewUI from 'view-design'
 import 'view-design/dist/styles/iview.css'
 import i18n from '@/locale'
 import config from '@/config'
+import api from '@/api/api'
 import importDirective from '@/directive'
 import { directive as clickOutside } from 'v-click-outside-x'
 import installPlugin from '@/plugin'
@@ -22,6 +23,7 @@ import 'v-org-tree/dist/v-org-tree.css'
 if (process.env.NODE_ENV !== 'production') require('@/mock')
 
 Vue.use(ViewUI, {
+  transfer: true,
   i18n: (key, value) => i18n.t(key, value)
 })
 Vue.use(TreeTable)
@@ -38,6 +40,11 @@ Vue.config.productionTip = false
  * @description 全局注册应用配置
  */
 Vue.prototype.$config = config
+
+/**
+ * @description 全局注册API接口配置
+ */
+Vue.prototype.$api = api
 /**
  * 注册指令
  */

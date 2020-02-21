@@ -8,6 +8,10 @@ import zhCnLocale from 'view-design/src/locale/lang/zh-CN'
 import enUsLocale from 'view-design/src/locale/lang/en-US'
 import zhTwLocale from 'view-design/src/locale/lang/zh-TW'
 
+import roleZhCn from '@/modules/role/lang/zh-CN'
+import roleZhTw from '@/modules/role/lang/zh-TW'
+import roleEnUs from '@/modules/role/lang/en-US'
+
 Vue.use(VueI18n)
 
 // 自动根据浏览器系统语言设置语言
@@ -20,9 +24,9 @@ Vue.config.lang = lang
 // vue-i18n 6.x+写法
 Vue.locale = () => {}
 const messages = {
-  'zh-CN': Object.assign(zhCnLocale, customZhCn),
-  'zh-TW': Object.assign(zhTwLocale, customZhTw),
-  'en-US': Object.assign(enUsLocale, customEnUs)
+  'zh-CN': Object.assign(zhCnLocale, customZhCn, roleZhCn),
+  'zh-TW': Object.assign(zhTwLocale, customZhTw, roleZhTw),
+  'en-US': Object.assign(enUsLocale, customEnUs, roleEnUs)
 }
 const i18n = new VueI18n({
   locale: lang,
