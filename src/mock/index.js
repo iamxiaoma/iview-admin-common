@@ -9,6 +9,8 @@ import * as roleMock from '@/modules/role/mock'
 // 引用部门管理模块模拟接口
 import * as departmentMock from '@/modules/department/mock'
 
+import * as managerMock from '@/modules/manager/mock'
+
 // 配置Ajax请求延时，可用来测试网络延迟大时项目中一些效果
 Mock.setup({
   timeout: 1000
@@ -33,5 +35,6 @@ Mock.mock(/\/get_tree_select_data/, getTreeSelectData)
 export default {
   Mock,
   ...roleMock,
-  ...departmentMock
+  ...departmentMock,
+  ...managerMock
 }

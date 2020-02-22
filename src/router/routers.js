@@ -1,7 +1,9 @@
 import Main from '@/components/main'
 import parentView from '@/components/parent-view'
+
 import RoleRouter from '@/modules/role/routers'
 import DepartmentRouter from '@/modules/department/routers'
+import ManagerRouter from '@/modules/manager/routers'
 
 /**
  * iview-admin中meta除了原生参数外可配置的参数:
@@ -54,6 +56,7 @@ export default [
   },
   ...RoleRouter,
   ...DepartmentRouter,
+  ...ManagerRouter,
   {
     path: '',
     name: 'doc',
