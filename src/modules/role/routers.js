@@ -1,7 +1,7 @@
 import Main from '@/components/main'
 
 /**
- * 角色模块的路由配置
+ * 模块的路由配置
  */
 
 /**

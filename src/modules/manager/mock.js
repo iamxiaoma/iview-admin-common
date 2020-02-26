@@ -1,7 +1,7 @@
 import Mock from 'mockjs'
 
 /**
- * 部门模块的接口模拟请求
+ * 模块的接口模拟请求
  */
 
 const departmentNameArr = ['市场部', '开发部', '财务部', '会计部', '销售部', '采购部', '客服中心', '产品部']

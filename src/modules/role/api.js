@@ -1,7 +1,7 @@
 import axios from '@/libs/api.request'
 
 /**
- * 角色管理模块的接口请求
+ * 模块的接口请求
  * @type {{add: (function(*=): (*|never)), edit: (function(*=): (*|never)), del: (function(*=): (*|never)), detail: (function(*=): (*|never)), list: (function(*=): (*|never))}}
  */
 export const role = {

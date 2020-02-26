@@ -4,12 +4,16 @@ import { getTableData, getDragList, uploadImage, getOrgData, getTreeSelectData }
 import { getMessageInit, getContentByMsgId, hasRead, removeReaded, restoreTrash, messageCount } from './user'
 
 // 引用角色列表模拟接口
-import * as roleMock from '@/modules/role/mock'
+import '@/modules/role/mock'
 
 // 引用部门管理模块模拟接口
-import * as departmentMock from '@/modules/department/mock'
+import '@/modules/department/mock'
 
-import * as managerMock from '@/modules/manager/mock'
+import '@/modules/manager/mock'
+
+import '@/modules/special/mock'
+
+import '@/components/common-upload/mock'
 
 // 配置Ajax请求延时，可用来测试网络延迟大时项目中一些效果
 Mock.setup({
@@ -32,9 +36,4 @@ Mock.mock(/\/message\/restore/, restoreTrash)
 Mock.mock(/\/message\/count/, messageCount)
 Mock.mock(/\/get_org_data/, getOrgData)
 Mock.mock(/\/get_tree_select_data/, getTreeSelectData)
-export default {
-  Mock,
-  ...roleMock,
-  ...departmentMock,
-  ...managerMock
-}
+export default Mock
