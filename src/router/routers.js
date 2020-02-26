@@ -5,6 +5,7 @@ import RoleRouter from '@/modules/role/routers'
 import DepartmentRouter from '@/modules/department/routers'
 import ManagerRouter from '@/modules/manager/routers'
 import SpecialRouter from '@/modules/special/routers'
+import CategoryRouter from '@/modules/category/routers'
 
 /**
  * iview-admin中meta除了原生参数外可配置的参数:
@@ -59,6 +60,7 @@ export default [
   ...DepartmentRouter,
   ...ManagerRouter,
   ...SpecialRouter,
+  ...CategoryRouter,
   {
     path: '',
     name: 'doc',

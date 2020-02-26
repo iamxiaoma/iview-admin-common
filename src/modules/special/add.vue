@@ -1,13 +1,13 @@
 <template>
-  <DepartmentAddEdit scene="add"></DepartmentAddEdit>
+  <SpecialAddEdit scene="add"></SpecialAddEdit>
 </template>
 
 <script>
-import DepartmentAddEdit from './add_edit'
+import SpecialAddEdit from './add_edit'
 export default {
-  name: 'department_add',
+  name: 'special_add',
   components: {
-    DepartmentAddEdit
+    SpecialAddEdit
   }
 }
 </script>
