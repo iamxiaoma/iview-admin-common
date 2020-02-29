@@ -16,7 +16,7 @@
       ref="upload"
       :name="file_name"
       :show-upload-list="false"
-      :default-file-list="defaultList"
+      :default-file-list="defaultListData"
       :on-success="handleSuccess"
       :accept="accept"
       :format="format"
@@ -122,6 +122,16 @@ export default {
       uploadList: []
     }
   },
+  computed: {
+    defaultListData: {
+      get () {
+        return this.defaultList
+      },
+      set (newValue) {
+        return newValue
+      }
+    }
+  },
   methods: {
     // 往组件外传递上传的文件url
     refreshUploadResult () {
@@ -184,14 +194,30 @@ export default {
       }
       return check
     },
-    onRefreshUploadList () {
-      this.uploadList = this.$refs.upload.fileList
-      console.log('common-upload onRefreshUploadList', this.uploadList)
+    // 动态刷新已经上传的图片列表数据
+    onRefreshUploadList (defaultList) {
+      const that = this
+      that.uploadList = that.$refs.upload.fileList
+      if (defaultList) {
+        defaultList.forEach(function (item) {
+          that.uploadList.push({
+            url: item.url,
+            name: item.name,
+            status: 'finished',
+            percentage: 100,
+            uid: Date.parse(new Date())
+          })
+        })
+      }
     }
   },
   mounted () {
-    this.uploadList = this.$refs.upload.fileList
-    console.log('common-upload mounted uploadlist', this.uploadList)
+    const that = this
+    // 立即调用外部的方法，再从外部的方法里，调用实例内部的方法
+    that.$emit('refreshTimeout', that)
+    that.$nextTick(() => {
+      that.uploadList = that.$refs.upload.fileList
+    })
   }
 }
 </script>

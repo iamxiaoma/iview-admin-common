@@ -76,26 +76,18 @@ export default {
     }
   },
   created () {
-    console.log('ueditor created content', this.content)
-    console.log('ueditor created value', this.value)
   },
   watch: {
     content: function (value) {
-      console.log('watch content', value)
       this.$emit('input', value == null ? '' : value)
     },
     value: function (value) {
-      console.log('watch value', value)
       this.content = value == null ? '' : value
     }
   },
   mounted () {
-    let that = this
-    console.log('ueditor mounted')
     this.$nextTick(function () {
       console.log('ueditor nextTick')
-      console.log('content', that.content)
-      console.log('value', that.value)
     })
   },
   methods: {
