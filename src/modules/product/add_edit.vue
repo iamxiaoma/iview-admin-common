@@ -32,7 +32,7 @@
             <Input v-model="spec_value.name" maxlength="10" placeholder="请输入规格值" v-show="spec.specs_value.length > 1" >
               <Button slot="append" icon="ios-trash-outline" @click.prevent="delSpecsValue(index, idx)"></Button>
             </Input>
-          </Col>s
+          </Col>
         </Row>
       </Card>
       <Button style="margin-top: 20px;" @click="addSpecs" icon="ios-add" size="large" type="default">新增规格</Button>
